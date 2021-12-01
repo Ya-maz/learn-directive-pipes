@@ -1,0 +1,23 @@
+<div>
+    <h1>Attribute</h1>
+    <nav>
+      <ul>
+        <li color>simple-directive with color red</li>
+        <li newEvent>event-directive with color change green</li>
+        <li>
+          <span myChangeColor="red">directive with passing data in attribute</span>
+          <span [myChangeColor]="currentColor"> directive with passing data from component</span>
+        </li>
+        <li>
+          <ul>
+            <li myRepeat message="repeat with attribute" count="[3]"></li>
+          </ul>
+          <ul>
+            <myRepeat message="repeat with tag" count="[2]"></myRepeat>
+          </ul>
+      </ul>
+      <button [myConfirm]="onDelete">Go</button>
+    </nav>
+    <div mouseEvent style="background-color: aquamarine; width: 250px; height: 250px;"></div>
+    <div clickable>click</div>
+  </div>

@@ -1,0 +1,42 @@
+<app-chaining-pipes></app-chaining-pipes>
+
+<app-async-pipes></app-async-pipes>
+<app-async-observable></app-async-observable>
+<h3>Data</h3>
+<table class="table">
+  <tr>
+    <th>Name</th>
+    <th>Price</th>
+    <th>Category</th>
+    <th>Code</th>
+    <th>Date</th>
+  </tr>
+  <tr *ngFor="let item of products">
+    <th>{{ item.name }}</th>
+    <th>{{ item.price }}</th>
+    <th>{{ item.category }}</th>
+    <th>{{ item.code }}</th>
+    <th>{{ item.date }}</th>
+  </tr>
+</table>
+
+<h3>Data with Filter/Pipe</h3>
+<table class="table">
+  <tr>
+    <th>Name</th>
+    <th>Price</th>
+    <th>Category</th>
+    <th>Code</th>
+    <th>Date</th>
+  </tr>
+  <tr *ngFor="let item of products">
+    <th>{{ item.name }}</th>
+    <th>{{ item.price | currency: "USD":true }}</th>
+    <th>{{ item.category | lowercase }}</th>
+    <th>{{ item.code | uppercase }}</th>
+    <th>{{ item.date | date }}</th>
+  </tr>
+</table>
+
+<!-- <input type="text" [(ngModel)]="value" />
+<b>{{ value | myCustom}}</b> -->

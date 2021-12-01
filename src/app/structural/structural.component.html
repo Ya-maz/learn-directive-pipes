@@ -1,0 +1,17 @@
+<div *myIf="visible">
+    My If sample
+</div>
+
+<button (click)="changeVisibility()">Change</button>
+
+<div *userCard="let fn = firstName; let ln = lastName">
+    <p><b>First Name:</b> {{fn}}</p>
+    <p><b>Last Name:</b> {{ln}}</p>
+</div>
+
+<div *myDelay="500">500ms</div>
+<div *myDelay="1000">1000ms</div>
+<div *myDelay="1500">1500ms</div>
+<div *myDelay="2000">2000ms</div>
+<div *myDelay="2500">2500ms</div>
+<div *myDelay="3000">3000ms</div>
